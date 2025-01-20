@@ -1,424 +1,340 @@
-body{
-    background-color: white;
+/* General Styles */
+body {
+    background-color: white; /* Good default background color */
 }
 
-
-
-/*navbar styling*/
-
+/* Navbar Styling */
 nav {
-    padding: 0;
+    padding: 0; /* Consistent padding, but might need spacing for better layout */
     margin: 0;
-    background-color: black;
-    box-sizing: border-box;
-    margin-bottom: 250px;
-  }
-  
-  .menu-bar {
-    /* margin-top: 50px; */
-    font-family: serif;
-    list-style: none;
-    background-color: rgb(227, 62, 1);
-    text-align: center;
-  }
-  
-  .menu-bar ul {
-    display: inline-flex;
-    list-style: none;
-    gap: 20px;
-    left: 120px;
-    color: white;
-  }
-  
-  .menu-bar ul li {
-    width: 100%;
+    background-color: black; /* High contrast for navbar */
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+    margin-bottom: 250px; /* Large bottom margin, consider reducing for smaller screens */
+}
+
+.menu-bar {
+    font-family: serif; /* Consistent font, but serif might not suit modern designs */
+    list-style: none; /* Removes default list styles */
+    background-color: rgb(227, 62, 1); /* Bright color for visibility */
+    text-align: center; /* Centers content horizontally */
+}
+
+.menu-bar ul {
+    display: inline-flex; /* Horizontal alignment for menu items */
+    list-style: none; /* Redundant, as it's already applied to .menu-bar */
+    gap: 20px; /* Good spacing between items */
+    left: 120px; /* This positioning might need adjustment for responsiveness */
+    color: white; /* Readable against the background */
+}
+
+.menu-bar ul li {
+    width: 100%; /* Makes each item take full width of the parent */
     margin: 10px;
-    padding: 10px;
-  }
-  
-  .menu-bar ul li a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .active,
-  .menu-bar ul li:hover {
-    background: black;
-    border-radius: 3px;
-  }
-  
-  /* .menu-bar .fa{
-    margin-right: 8px
-  } */
-  
-  .sub-menu-1 {
-    display: none;
-  }
-  
-  .sub-menu-2 {
-    display: none;
-  }
-  
-  .menu-bar ul li:hover .sub-menu-1 {
-    display: block;
+    padding: 10px; /* Provides sufficient clickable area */
+}
+
+.menu-bar ul li a {
+    text-decoration: none; /* Removes underline for cleaner look */
+    color: white; /* Matches the menu bar color scheme */
+}
+
+.active,
+.menu-bar ul li:hover {
+    background: black; /* Highlights the hovered or active item */
+    border-radius: 3px; /* Slight rounding for modern design */
+}
+
+.sub-menu-1 {
+    display: none; /* Hidden dropdown initially */
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block; /* Shows dropdown on hover */
     position: absolute;
-    background: red;
+    background: red; /* Bright dropdown background, could be distracting */
     margin-top: 5px;
-    margin-left: -10px;
-  }
-  
-  /* .menu-bar ul li:hover .sub-menu-2{
-    display: block;
-    position: absolute;
-    background: red;
-    margin-top: 5px;
-    margin-left: -15px;
-  } */
-  
-  .menu-bar ul li:hover .sub-menu-1 ul {
-    display: block;
-    margin: 20px;
-  }
-  
-  /* .menu-bar ul li:hover .sub-menu-2 ul{
-    display: block;
-    margin: 5px;
-  } */
-  
-  .menu-bar ul li:hover .sub-menu-1 ul li {
-    width: 100px;
+    margin-left: -10px; /* Slight left offset, adjust if needed */
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 100px; /* Fixed width for dropdown items */
     padding: 10px;
-    border-bottom: 1px solid white;
-    background: transparent;
-    border-radius: 0;
-    text-align: left;
-  }
-  
-  .menu-bar ul li:hover .sub-menu-1 ul li:last-child {
-    border-bottom: none;
-  }
-  
-  .menu-bar ul li:hover .sub-menu-1 ul li a:hover {
-    color: black;
-  }
-  
-  /* .menu-bar ul li:hover .sub-menu-2 ul li{
-    width: 100px;
-    padding: 10px;
-    border-bottom: 1px solid white;
-  } */
+    border-bottom: 1px solid white; /* Clear separation between items */
+    background: transparent; /* Matches parent background */
+    border-radius: 0; /* Consistent style */
+    text-align: left; /* Aligns text for better readability */
+}
 
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none; /* Removes unnecessary border for last item */
+}
 
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+    color: black; /* Changes text color on hover for visibility */
+}
 
-  /*card styling*/
-/* From Uiverse.io by mrhyddenn */ 
+/* Card Styling */
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .card_box {
-    width: 300px;
-    height: 400px;
-    border-radius: 20px;
-    background-color: white;
-    position: relative;
-    
-    
-    border: 1px solid black;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: all .3s;
-    padding: 20px;
-    flex-basis: 300px;
-    margin-left: 10px;
-  }
-  
-  .card_box:hover {
-    transform: scale(0.9);
-  }
-  
-  .card_box span {
-    position: absolute;
-    overflow: hidden;
-    width: 150px;
+    display: flex; /* Enables flexible layout */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    gap: 2rem; /* Provides consistent spacing */
+}
+
+.card_box {
+    width: 300px; /* Fixed width for uniform cards */
+    height: 400px; /* Fixed height for uniform cards */
+    border-radius: 20px; /* Smooth corners for modern look */
+    background-color: white; /* Clean card background */
+    border: 1px solid black; /* Visible border for distinction */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s; /* Smooth hover effect */
+    padding: 20px; /* Consistent inner spacing */
+    flex-basis: 300px; /* Maintains card size consistency */
+    margin-left: 10px; /* Slight spacing on the left */
+}
+
+.card_box:hover {
+    transform: scale(0.9); /* Slight shrink effect on hover */
+}
+
+.card_box span {
+    position: absolute; /* Ensures proper placement */
+    overflow: hidden; /* Hides excess content */
+    width: 150px; /* Fixed size for offer badge */
     height: 150px;
-    top: -10px;
-    right: -10px;
+    top: -10px; /* Positions badge above the card */
+    right: -10px; /* Positions badge to the right */
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .card_box span::before {
-    content: 'Offer';
+}
+
+.card_box span::before {
+    content: 'Offer'; /* Text for the badge */
     position: absolute;
     width: 150%;
-    height: 40px;
-    background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
-    transform: rotate(45deg) translateY(-20px) ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 0.1em;
- 
-    
-  }
-  
-  .card_box span::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    bottom: 0;
-    right: 0;
-    height: 10px;
-    z-index: -1;
-    box-shadow: 140px -140px #cc3f47;
-    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
-  }
-
-
-  .card_box h1{
-    margin-top: 0px;
-    margin-right: 30px;
-    font-size: 50px;
-  }
-
-  .broo{
-    text-align: center;
-    font-size: 50px;
-    font-style: bold;
-    color: red;
-    }
-
-
-
-
-
-  /*section1*/
-  .membership-offers h2{
-
-    font-size: 60px;
-    font-weight: 300;
-    margin-top: 50px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-   
-    
-    
-   }
-   
-   
-   .membership-offers h3{
-       font-size: 30px;
-       margin-bottom: 10px;
-       font-weight: 600;
-       background-color: lightblue;
-       border: 1px solid black;
-       border-radius: 10px;
-       
-   }
-
-   .center-pic{
-    margin-left:20px;
+    height: 40px; /* Height of the badge */
+    background-image: linear-gradient(45deg, #ff6547 0%, #ffb144 51%, #ff7053 100%); /* Gradient background */
+    transform: rotate(45deg) translateY(-20px); /* Angled badge for unique styling */
+    color: #fff; /* Text color for contrast */
+    font-weight: 600; /* Bold text for emphasis */
+    letter-spacing: 0.1em; /* Adds spacing between letters */
 }
-.center-pic{
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-   }
-    .center-pic img{
-    width: 100%;
+
+.card_box h1 {
+    margin-top: 0;
+    margin-right: 30px; /* Adjusted margin for layout */
+    font-size: 50px; /* Large heading size */
+}
+
+.broo {
+    text-align: center; /* Centers text */
+    font-size: 50px; /* Large text for emphasis */
+    font-style: bold; /* Should use font-weight instead of font-style */
+    color: red; /* High visibility color */
+}
+
+/* Membership Offers */
+.membership-offers h2 {
+    font-size: 60px; /* Large title for prominence */
+    font-weight: 300; /* Light weight for modern look */
+    margin-top: 50px;
+    text-align: center; /* Centers the heading */
+    font-family: 'Times New Roman', Times, serif; /* Classic font choice */
+}
+
+.membership-offers h3 {
+    font-size: 30px; /* Secondary heading size */
+    margin-bottom: 10px;
+    font-weight: 600; /* Bold for emphasis */
+    background-color: lightblue; /* Highlighted background */
+    border: 1px solid black; /* Distinct border */
+    border-radius: 10px; /* Smooth corners */
+}
+
+.center-pic {
+    position: relative; /* For controlled layout */
+    overflow: hidden; /* Prevents overflow */
+    height: 300px; /* Fixed height */
+}
+
+.center-pic img {
+    width: 100%; /* Full width for responsiveness */
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-   
-    }
+    object-fit: cover; /* Ensures proper image fit */
+    object-position: center; /* Centers the image */
+}
 
+/* About Us Section */
+.aboutus {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex; /* Enables layout alignment */
+}
 
-    /*aboutus part*/
-    .aboutus{
-        margin-top: 50px;
-        margin-bottom: 50px;
-        display: flex;
-    
-    
-    }
-    
-    
-    #main-aboutus{
-       
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 2rem;
-   
-    }
-    
-    #main-aboutus h1{
-        font-size: 3rem;
-        margin-bottom: 1rem;
-    }
-    
-    #main-aboutus h2{
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        
-    }
-    
-    #main-aboutus p{
-    font-size: 1rem;
-    line-height: 1.5;
-    }
-    
-    
-    #beside-aboutus{
-    height: 180px;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: orangered;
-    }
-    
-    #beside-aboutus h3{
+#main-aboutus {
+    max-width: 400px; /* Fixed width for readability */
+    margin: 0 auto; /* Centers content */
+    padding: 2rem; /* Consistent spacing */
+}
+
+#main-aboutus h1 {
+    font-size: 3rem; /* Large heading size */
+    margin-bottom: 1rem;
+}
+
+#main-aboutus h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: white;
-    }
-    
-    #beside-aboutus p{
-        font-size: 1rem;
-        line-height: 1.5;
-        color:white;
-    }
-    
-    .location-btn{
-        background-color: rgb(11, 137, 179);
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-    }
+}
 
-    /*whysection*/
-    .why-task {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        gap: 100px; /* Increased gap between heading and image */
-    }
-    
-    .why-task h1 {
-        font-size: 64px;
-        font-weight: bold;
-        margin: 0;
-        line-height: 1.1;
-        max-width: 300px; /* Control the width of the heading */
-    }
-    
-    .why-task img {
-        max-width: 500px;
-        height: auto;
-    }
-    
-    .cards-container {
-        display: flex; /* Changed to flex from grid */
-        justify-content: space-between;
-        max-width: 1400px;
-        margin: 40px auto 0;
-        padding: 20px;
-        gap: 20px;
-    }
-    
-    .feature-card {
-        flex: 1;
-        background-color: #38bdf8;
-        border-radius: 12px;
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    
-    .image-container {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-bottom: 20px;
-    }
-    
-    .image-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .card-title {
-        color: white;
-        font-size: 28px;
-        font-weight: bold;
-        margin: 0 0 12px 0;
-    }
-    
-    .card-description {
-        color: white;
-        font-size: 16px;
-        margin: 0;
-        line-height: 1.5;
-    }
-    
-    
-    .why-pic{
-        display: flex;
-        justify-content: center;
-        margin-left: 50px;
-       
-    }
+#main-aboutus p {
+    font-size: 1rem; /* Standard paragraph size */
+    line-height: 1.5; /* Improves readability */
+}
 
+#beside-aboutus {
+    height: 180px; /* Fixed height */
+    max-width: 400px;
+    margin: 0 auto; /* Centers content */
+    padding: 2rem;
+    background-color: orangered; /* Bright background */
+}
 
-    /* FOOTER */
+#beside-aboutus h3 {
+    font-size: 2rem; /* Bold heading size */
+    margin-bottom: 1rem;
+    color: white; /* Contrast with background */
+}
+
+#beside-aboutus p {
+    font-size: 1rem; /* Standard paragraph size */
+    line-height: 1.5;
+    color: white; /* Consistent contrast */
+}
+
+.location-btn {
+    background-color: rgb(11, 137, 179); /* Distinct button color */
+    color: white; /* High contrast text */
+    padding: 10px 20px; /* Good button size */
+    border-radius: 5px; /* Smooth edges */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Why Section */
+.why-task {
+    display: flex; /* Enables layout alignment */
+    align-items: center; /* Vertically aligns items */
+    justify-content: flex-start; /* Aligns content to the left */
+    max-width: 1400px; /* Limits width for readability */
+    margin: 0 auto; /* Centers section */
+    padding: 40px 20px; /* Consistent spacing */
+    gap: 100px; /* Good spacing between elements */
+}
+
+.why-task h1 {
+    font-size: 64px; /* Large heading size */
+    font-weight: bold; /* Bold text for emphasis */
+    margin: 0;
+    line-height: 1.1; /* Improves readability */
+    max-width: 300px; /* Limits heading width */
+}
+
+.why-task img {
+    max-width: 500px; /* Scales well for responsiveness */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.cards-container {
+    display: flex; /* Enables flexible layout */
+    justify-content: space-between; /* Even spacing */
+    max-width: 1400px; /* Limits width */
+    margin: 40px auto 0; /* Centers section */
+    padding: 20px; /* Adds spacing */
+    gap: 20px; /* Spacing between cards */
+}
+
+.feature-card {
+    flex: 1; /* Equal distribution of card width */
+    background-color: #38bdf8; /* Bright color for visibility */
+    border-radius: 12px; /* Smooth corners */
+    padding: 24px; /* Good inner spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centers text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.image-container {
+    width: 120px; /* Fixed size for images */
+    height: 120px;
+    border-radius: 50%; /* Circular image container */
+    overflow: hidden; /* Hides excess content */
+    margin-bottom: 20px; /* Spacing below image */
+}
+
+.image-container img {
+    width: 100%; /* Scales to container */
+    height: 100%; /* Scales to container */
+    object-fit: cover; /* Ensures proper fit */
+}
+
+.card-title {
+    color: white; /* Matches card background */
+    font-size: 28px; /* Prominent title size */
+    font-weight: bold; /* Bold text for emphasis */
+    margin: 0 0 12px 0;
+}
+
+.card-description {
+    color: white; /* Matches card background */
+    font-size: 16px; /* Standard size for readability */
+    margin: 0;
+    line-height: 1.5; /* Improves readability */
+}
+
+.why-pic {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px; /* Spacing adjustment */
+}
+
+/* Footer */
 footer {
-  background-color: #000;
-  color: white;
-  
+    background-color: #000; /* Matches navbar color */
+    color: white; /* High contrast text */
 }
 
 .footer-img {
-  height: 100px;
+    height: 100px; /* Fixed height for images */
 }
 
-.footer-section2 ul li a{
-  list-style: none;
-  
+.footer-section2 ul li a {
+    list-style: none; /* Removes list styles */
 }
 
 .footer-content {
-  margin-top: 50px;
-  justify-content: space-between;
-  row-gap: 40px;
-  display: flex;
-  margin-left: 50px;
-  margin-right: 50px;
+    margin-top: 50px;
+    justify-content: space-between; /* Distributes sections evenly */
+    row-gap: 40px; /* Spacing between rows */
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.footer-bottom{
-  margin-top: 50px;
-  margin-left: 600px;
+.footer-bottom {
+    margin-top: 50px;
+    margin-left: 600px; /* Aligns text centrally */
 }
-.footer-content ul{
-  list-style: none;
-  
+
+.footer-content ul {
+    list-style: none; /* Removes list styles */
 }
-.footer-content a{
-  color: white;
-  text-decoration: none;
+
+.footer-content a {
+    color: white; /* Matches footer text color */
+    text-decoration: none; /* Removes underline */
 }
